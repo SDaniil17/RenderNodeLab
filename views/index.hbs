@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+ 
+  <div>
+
+    {{#each numbers}}
+      <button
+        onclick="window.location.href='update/{{name}}/{{number}}'"
+      >
+        {{name}}
+        {{number}}</button>
+      <br />
+
+    {{/each}}
+
+  </div>
+  <div>
+    <button onclick="window.location.href='add'" >Add</button>
+  </div>
+</body>

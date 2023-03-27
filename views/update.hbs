@@ -1,0 +1,45 @@
+<head>
+  <script src="/static/update.js"></script>
+</head>
+<body>
+  <div>
+    {{#each numbers}}
+      <button disabled="true">
+        {{name}}
+        {{number}}</button>
+      <br />
+    {{/each}}
+  </div>
+  <div>
+    <form id="update">
+      <input
+        type="text"
+        name="name"
+        value="{{name}}"
+        maxlength="40"
+        oninput="getElementById('delete').disabled=1"
+      />
+      <input
+        type="text"
+        name="number"
+        maxlength="15"
+        value="{{number}}"
+        oninput="getElementById('delete').disabled=1"
+      />
+    </form>
+
+    <input
+      type="button"
+      value="Update"
+      onclick="update('{{number}}')"
+    />
+    <input
+      type="button"
+      id="delete"
+      value="Delete"
+      onclick="deleteNumber('{{number}}')"
+    />
+      {{> cancelButton}}
+  </div>
+
+</body>
