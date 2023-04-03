@@ -1,0 +1,25 @@
+<head>
+</head>
+<body>
+  <script src="/static/add.js">
+  </script>
+  <div class="viewArea">
+
+    {{#each numbers}}
+      <a> 
+        {{name}}
+        {{number}}</a>
+      <br />
+
+    {{/each}}
+
+  </div>
+  <div>
+    <form id="Add">
+      <input type="text" name="name" maxlength="40" />
+      <input type="text" name="number" maxlength="15" />
+    </form>
+    <input type="button" onclick="add()" value="Добавить"/>
+    {{> cancelButton}}
+  </div>
+</body>
