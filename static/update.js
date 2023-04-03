@@ -15,7 +15,7 @@ function update(previousNumber) {
         return false;
       }
       
-    fetch("http://localhost:3000/update", {
+    fetch("/update", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -37,7 +37,7 @@ function update(previousNumber) {
   }
   
   function deleteNumber(number) {
-    fetch(`http://localhost:3000/delete/${number}`, {
+    fetch(`/delete/${number}`, {
       method: "DELETE",
     }).then((result) => {
       if (result.redirected) {
