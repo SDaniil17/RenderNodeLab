@@ -4,14 +4,12 @@
 <body>
   <div>
     {{#each numbers}}
-      <button disabled="true">
-        {{name}}
-        {{number}}</button>
+      <a>{{name}}{{number}}</a>
       <br />
     {{/each}}
   </div>
   <div>
-    <form id="update">
+    <form>
       <input
         type="text"
         name="name"
@@ -30,13 +28,13 @@
 
     <input
       type="button"
-      value="Update"
+      value="Обновить"
       onclick="update('{{number}}')"
     />
     <input
       type="button"
       id="delete"
-      value="Delete"
+      value="Удалить"
       onclick="deleteNumber('{{number}}')"
     />
       {{> cancelButton}}

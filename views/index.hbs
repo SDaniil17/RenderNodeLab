@@ -2,21 +2,16 @@
 <head>
 </head>
 <body>
- 
-  <div>
-
     {{#each numbers}}
-      <button
-        onclick="window.location.href='update/{{name}}/{{number}}'"
-      >
+      <a href='update/{{name}}/{{number}}' style="text-decoration:none; color:black;" >
         {{name}}
-        {{number}}</button>
+        {{number}}</a>
       <br />
 
     {{/each}}
 
   </div>
   <div>
-    <button onclick="window.location.href='add'" >Add</button>
+    <a href="add" style="text-decoration:none; color:black;" >Добавить</a>
   </div>
 </body>

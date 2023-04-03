@@ -6,9 +6,9 @@
   <div class="viewArea">
 
     {{#each numbers}}
-      <button disabled="true"> 
+      <a> 
         {{name}}
-        {{number}}</button>
+        {{number}}</a>
       <br />
 
     {{/each}}
@@ -19,7 +19,7 @@
       <input type="text" name="name" maxlength="40" />
       <input type="text" name="number" maxlength="15" />
     </form>
-    <input type="button" onclick="add()" value="Add"/>
+    <input type="button" onclick="add()" value="Добавить"/>
     {{> cancelButton}}
   </div>
 </body>
