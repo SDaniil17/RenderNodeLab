@@ -9,7 +9,7 @@
     {{/each}}
   </div>
   <div>
-    <form>
+    <form  id="update">
       <input
         type="text"
         name="name"
@@ -37,7 +37,7 @@
       value="Удалить"
       onclick="deleteNumber('{{number}}')"
     />
-      {{> cancelButton}}
+       {{#cancelButton}}{{/cancelButton}}
   </div>
 
 </body>

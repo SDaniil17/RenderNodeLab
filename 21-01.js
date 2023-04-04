@@ -7,7 +7,9 @@ const hbs = require("express-handlebars").create({
     extname: ".hbs",
     defaultLayout: "index",
     layoutsDir: "views",
+    helpers: require('./views/helpers/cancelButton')
 })
+
 
 const PORT = 3000
 app.engine(".hbs", hbs.engine);

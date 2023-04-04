@@ -3,7 +3,7 @@
 <body>
   <script src="/static/add.js">
   </script>
-  <div class="viewArea">
+  <div>
 
     {{#each numbers}}
       <a> 
@@ -20,6 +20,6 @@
       <input type="text" name="number" maxlength="15" />
     </form>
     <input type="button" onclick="add()" value="Добавить"/>
-    {{> cancelButton}}
+    {{#cancelButton}}{{/cancelButton}}
   </div>
 </body>
